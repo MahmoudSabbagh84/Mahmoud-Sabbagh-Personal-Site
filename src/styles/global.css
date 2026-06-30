@@ -239,3 +239,45 @@ html.js [data-reveal].is-visible {
     transition: none;
   }
 }
+
+/* ----------------------------------------------------------------------------
+   Signature motion — earned moments, not a uniform reflex.
+---------------------------------------------------------------------------- */
+
+/* Hero name: per-line mask wipe. Padding/negative-margin keeps descenders
+   ('g' in Sabbagh) inside the clip without shifting layout. */
+.name-line {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.18em;
+  margin-bottom: -0.18em;
+}
+.name-line > span {
+  display: block;
+}
+html.js .name-line > span {
+  transform: translateY(115%);
+}
+html.js .name-line.is-in > span {
+  transform: none;
+  transition: transform 0.9s var(--ease-out-expo);
+  transition-delay: var(--line-delay, 0ms);
+}
+
+/* Experience timeline rail draws down on entry. */
+html.js .exp-rail {
+  transform: scaleY(0);
+  transform-origin: top;
+}
+html.js .exp-rail.is-in {
+  transform: scaleY(1);
+  transition: transform 1.1s var(--ease-out-expo);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.js .name-line > span,
+  html.js .exp-rail {
+    transform: none;
+    transition: none;
+  }
+}

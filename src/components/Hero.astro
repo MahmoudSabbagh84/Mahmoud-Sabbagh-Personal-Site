@@ -25,8 +25,8 @@ import { profile } from "../data/resume";
           <span class="truncate">Open&nbsp;to PM · Scrum&nbsp;Master · PO&nbsp;roles</span>
         </div>
 
-        <h1 id="hero-heading" data-reveal style="--reveal-delay:60ms" class="font-display text-[clamp(2.4rem,8vw,5rem)] font-semibold leading-[0.98] tracking-[-0.035em] text-ink">
-          <span class="block">Mahmoud</span><span class="block">Sabbagh</span>
+        <h1 id="hero-heading" class="font-display text-[clamp(2.4rem,8vw,5rem)] font-semibold leading-[0.98] tracking-[-0.035em] text-ink">
+          <span class="name-line" style="--line-delay:120ms"><span>Mahmoud</span></span><span class="name-line" style="--line-delay:215ms"><span>Sabbagh</span></span>
         </h1>
 
         <p data-reveal style="--reveal-delay:120ms" class="mt-5 max-w-xl text-lg leading-relaxed text-muted sm:text-xl">
@@ -106,3 +106,19 @@ import { profile } from "../data/resume";
     </div>
   </div>
 </section>
+
+<script is:inline>
+  (function () {
+    var lines = document.querySelectorAll(".name-line");
+    if (!lines.length) return;
+    var reveal = function () {
+      lines.forEach(function (l) { l.classList.add("is-in"); });
+    };
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      reveal();
+      return;
+    }
+    // Double rAF: paint the hidden state first, then trigger the transition.
+    requestAnimationFrame(function () { requestAnimationFrame(reveal); });
+  })();
+</script>

@@ -16,7 +16,7 @@ import { experience } from "../data/resume";
 
     <ol class="relative">
       <!-- Timeline rail -->
-      <span class="absolute left-[7px] top-2 bottom-2 w-px bg-line md:left-[calc(11rem+7px)]" aria-hidden="true"></span>
+      <span class="exp-rail absolute left-[7px] top-2 bottom-2 w-px bg-line md:left-[calc(11rem+7px)]" aria-hidden="true"></span>
 
       {experience.map((job, i) => (
         <li data-reveal style={`--reveal-delay:${Math.min(i, 4) * 60}ms`} class="group relative grid grid-cols-1 gap-x-8 gap-y-3 pb-12 pl-9 last:pb-0 md:grid-cols-[11rem_1fr] md:pl-0">
@@ -55,3 +55,21 @@ import { experience } from "../data/resume";
     </ol>
   </div>
 </section>
+
+<script is:inline>
+  (function () {
+    var rail = document.querySelector(".exp-rail");
+    if (!rail) return;
+    var list = rail.closest("ol");
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window) || !list) {
+      rail.classList.add("is-in");
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { rail.classList.add("is-in"); io.disconnect(); }
+      });
+    }, { threshold: 0.12 });
+    io.observe(list);
+  })();
+</script>
