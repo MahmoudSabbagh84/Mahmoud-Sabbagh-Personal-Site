@@ -16,8 +16,9 @@
   --surface: oklch(0.974 0.004 25);
   --surface-2: oklch(0.955 0.006 25);
   --ink: oklch(0.22 0.018 25);
-  --muted: oklch(0.475 0.015 25);
+  --muted: oklch(0.42 0.016 25);
   --primary: oklch(0.585 0.205 23);
+  --primary-ink: oklch(0.46 0.16 24);
   --primary-soft: oklch(0.585 0.205 23 / 0.1);
   --accent: oklch(0.42 0.13 22);
   --on-primary: oklch(0.99 0.005 25);
@@ -38,8 +39,9 @@
   --surface: oklch(0.205 0.007 25);
   --surface-2: oklch(0.245 0.008 25);
   --ink: oklch(0.945 0.005 60);
-  --muted: oklch(0.7 0.012 35);
+  --muted: oklch(0.74 0.014 35);
   --primary: oklch(0.665 0.19 25);
+  --primary-ink: oklch(0.76 0.15 26);
   --primary-soft: oklch(0.665 0.19 25 / 0.16);
   --accent: oklch(0.74 0.12 28);
   --on-primary: oklch(0.16 0.02 25);
@@ -65,6 +67,7 @@
   --color-ink: var(--ink);
   --color-muted: var(--muted);
   --color-primary: var(--primary);
+  --color-primary-ink: var(--primary-ink);
   --color-primary-soft: var(--primary-soft);
   --color-accent: var(--accent);
   --color-on-primary: var(--on-primary);

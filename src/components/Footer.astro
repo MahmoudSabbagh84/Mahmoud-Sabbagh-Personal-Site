@@ -16,35 +16,35 @@ const links = [
       <div class="max-w-sm">
         <a href="/" class="flex items-center gap-2.5" aria-label={`${profile.name} — home`}>
           <span class="grid h-9 w-9 place-items-center rounded-full bg-primary text-on-primary font-display text-sm font-semibold">{profile.initials}</span>
-          <span class="font-display text-[15px] font-semibold tracking-tight text-ink">{profile.name}</span>
+          <span class="font-display text-[16px] font-semibold tracking-tight text-ink">{profile.name}</span>
         </a>
-        <p class="mt-4 text-[15px] leading-relaxed text-muted">{profile.tagline}</p>
+        <p class="mt-4 text-[16px] leading-relaxed text-muted">{profile.tagline}</p>
         <a href={profile.resumeFile} download class="mt-5 inline-flex items-center gap-2 text-[14.5px] font-semibold text-ink link-underline">
-          <svg class="h-4 w-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" /></svg>
+          <svg class="h-4 w-4 text-primary-ink" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" /></svg>
           Download Resume
         </a>
       </div>
 
       <nav class="flex flex-col gap-3" aria-label="Footer">
-        <span class="text-[12.5px] font-semibold uppercase tracking-[0.14em] text-muted">Navigate</span>
+        <span class="text-[13px] font-semibold uppercase tracking-[0.14em] text-muted">Navigate</span>
         {links.map((l) => (
-          <a href={l.href} class="text-[15px] text-ink/80 transition-colors hover:text-primary">{l.label}</a>
+          <a href={l.href} class="text-[16px] text-ink/80 transition-colors hover:text-primary-ink">{l.label}</a>
         ))}
       </nav>
 
       <nav class="flex flex-col gap-3" aria-label="Elsewhere">
-        <span class="text-[12.5px] font-semibold uppercase tracking-[0.14em] text-muted">Reach me</span>
-        <a href={`mailto:${profile.email}`} class="text-[15px] text-ink/80 transition-colors hover:text-primary">Email</a>
-        <a href={profile.linkedin} target="_blank" rel="noopener" class="text-[15px] text-ink/80 transition-colors hover:text-primary">LinkedIn</a>
-        <a href={`tel:${profile.phone.replace(/[^0-9]/g, "")}`} class="text-[15px] text-ink/80 transition-colors hover:text-primary">{profile.phone}</a>
+        <span class="text-[13px] font-semibold uppercase tracking-[0.14em] text-muted">Reach me</span>
+        <a href={`mailto:${profile.email}`} class="text-[16px] text-ink/80 transition-colors hover:text-primary-ink">Email</a>
+        <a href={profile.linkedin} target="_blank" rel="noopener" class="text-[16px] text-ink/80 transition-colors hover:text-primary-ink">LinkedIn</a>
+        <a href={`tel:${profile.phone.replace(/[^0-9]/g, "")}`} class="text-[16px] text-ink/80 transition-colors hover:text-primary-ink">{profile.phone}</a>
       </nav>
     </div>
 
     <div class="mt-12 flex flex-col items-start justify-between gap-4 border-t border-line pt-7 sm:flex-row sm:items-center">
-      <p class="text-[13.5px] text-muted">© {year} {profile.name}. All rights reserved.</p>
-      <a href="#top" class="group inline-flex items-center gap-2 text-[13.5px] font-medium text-muted transition-colors hover:text-ink">
+      <p class="text-[14.5px] text-muted">© {year} {profile.name}. All rights reserved.</p>
+      <a href="#top" class="group inline-flex items-center gap-2 text-[14.5px] font-medium text-muted transition-colors hover:text-ink">
         Back to top
-        <span class="grid h-7 w-7 place-items-center rounded-full border border-line transition-colors group-hover:border-primary group-hover:text-primary">
+        <span class="grid h-7 w-7 place-items-center rounded-full border border-line transition-colors group-hover:border-primary group-hover:text-primary-ink">
           <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6" /></svg>
         </span>
       </a>
