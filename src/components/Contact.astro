@@ -1,0 +1,168 @@
+---
+import { profile } from "../data/resume";
+
+// Web3Forms access key — set PUBLIC_WEB3FORMS_KEY in .env (and in Amplify env vars).
+const accessKey = import.meta.env.PUBLIC_WEB3FORMS_KEY ?? "";
+---
+
+<section id="contact" class="section-pad scroll-mt-24">
+  <div class="container-page">
+    <div class="overflow-hidden rounded-[1.75rem] border border-line bg-surface">
+      <div class="grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr]">
+        <!-- Left -->
+        <div class="border-b border-line p-8 sm:p-11 lg:border-b-0 lg:border-r">
+          <p data-reveal class="mb-3 flex items-center gap-2.5 text-[13px] font-semibold text-primary">
+            <span class="h-px w-6 bg-primary"></span>
+            Contact
+          </p>
+          <h2 data-reveal class="font-display text-[clamp(1.9rem,4.5vw,2.8rem)] font-semibold leading-[1.05] tracking-[-0.03em] text-ink">
+            Let's talk about your next program.
+          </h2>
+          <p data-reveal class="mt-4 max-w-md text-lg leading-relaxed text-muted">
+            Open to Project Manager, Scrum Master, Product Owner, and operations roles. The fastest way to reach me is the form — or any of these.
+          </p>
+
+          <ul data-reveal class="mt-9 space-y-1">
+            <li>
+              <a href={`mailto:${profile.email}`} class="group flex items-center gap-4 rounded-xl py-3 transition-colors">
+                <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-line bg-bg text-primary transition-colors group-hover:border-primary">
+                  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3 7 9 6 9-6" /></svg>
+                </span>
+                <span class="min-w-0">
+                  <span class="block text-[12.5px] font-medium text-muted">Email</span>
+                  <span class="block truncate text-[15px] font-semibold text-ink">{profile.email}</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href={profile.linkedin} target="_blank" rel="noopener" class="group flex items-center gap-4 rounded-xl py-3 transition-colors">
+                <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-line bg-bg text-primary transition-colors group-hover:border-primary">
+                  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.94 5a2 2 0 1 1-4 .002 2 2 0 0 1 4-.002zM7 8.48H3V21h4V8.48zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91l.04-1.68z" /></svg>
+                </span>
+                <span class="min-w-0">
+                  <span class="block text-[12.5px] font-medium text-muted">LinkedIn</span>
+                  <span class="block truncate text-[15px] font-semibold text-ink">mahmoud-sabbagh</span>
+                </span>
+              </a>
+            </li>
+            <li class="flex items-center gap-4 py-3">
+              <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-line bg-bg text-primary">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z" /><circle cx="12" cy="10" r="3" /></svg>
+              </span>
+              <span>
+                <span class="block text-[12.5px] font-medium text-muted">Location</span>
+                <span class="block text-[15px] font-semibold text-ink">{profile.location}</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right: form -->
+        <div class="p-8 sm:p-11">
+          <form id="contact-form" data-reveal data-access-key={accessKey} class="space-y-5" novalidate>
+            <input type="hidden" name="access_key" value={accessKey} />
+            <input type="hidden" name="subject" value="New message from your portfolio site" />
+            <input type="hidden" name="from_name" value="Portfolio — mahmoudsabbagh.com" />
+            <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+            <div class="grid grid-cols-1 gap-5 sm:grid-cols-2">
+              <div>
+                <label for="cf-name" class="mb-1.5 block text-[13.5px] font-medium text-ink">Name</label>
+                <input id="cf-name" name="name" type="text" required autocomplete="name"
+                  class="w-full rounded-xl border border-line bg-bg px-4 py-3 text-[15px] text-ink outline-none transition-colors placeholder:text-muted/70 focus:border-primary focus:ring-2 focus:ring-[var(--ring)]"
+                  placeholder="Your name" />
+              </div>
+              <div>
+                <label for="cf-email" class="mb-1.5 block text-[13.5px] font-medium text-ink">Email</label>
+                <input id="cf-email" name="email" type="email" required autocomplete="email"
+                  class="w-full rounded-xl border border-line bg-bg px-4 py-3 text-[15px] text-ink outline-none transition-colors placeholder:text-muted/70 focus:border-primary focus:ring-2 focus:ring-[var(--ring)]"
+                  placeholder="you@company.com" />
+              </div>
+            </div>
+
+            <div>
+              <label for="cf-company" class="mb-1.5 block text-[13.5px] font-medium text-ink">Company <span class="font-normal text-muted">(optional)</span></label>
+              <input id="cf-company" name="company" type="text" autocomplete="organization"
+                class="w-full rounded-xl border border-line bg-bg px-4 py-3 text-[15px] text-ink outline-none transition-colors placeholder:text-muted/70 focus:border-primary focus:ring-2 focus:ring-[var(--ring)]"
+                placeholder="Where you're hiring for" />
+            </div>
+
+            <div>
+              <label for="cf-message" class="mb-1.5 block text-[13.5px] font-medium text-ink">Message</label>
+              <textarea id="cf-message" name="message" required rows="4"
+                class="w-full resize-y rounded-xl border border-line bg-bg px-4 py-3 text-[15px] text-ink outline-none transition-colors placeholder:text-muted/70 focus:border-primary focus:ring-2 focus:ring-[var(--ring)]"
+                placeholder="A line about the role or program you have in mind…"></textarea>
+            </div>
+
+            <button type="submit" id="cf-submit"
+              class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3.5 text-[15px] font-semibold text-on-primary shadow-[var(--shadow-md)] transition-all hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto">
+              <span class="cf-label">Send message</span>
+              <svg class="cf-spinner hidden h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2.5" opacity="0.25" /><path d="M21 12a9 9 0 0 0-9-9" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" /></svg>
+            </button>
+
+            <p id="cf-status" role="status" aria-live="polite" class="hidden text-[14px] font-medium"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  (function () {
+    var form = document.getElementById("contact-form");
+    if (!form) return;
+    var status = document.getElementById("cf-status");
+    var btn = document.getElementById("cf-submit");
+    var label = btn.querySelector(".cf-label");
+    var spinner = btn.querySelector(".cf-spinner");
+
+    function setStatus(msg, ok) {
+      status.textContent = msg;
+      status.classList.remove("hidden");
+      status.style.color = ok ? "var(--primary)" : "oklch(0.55 0.2 25)";
+    }
+
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+      var key = form.getAttribute("data-access-key");
+      if (!key) {
+        setStatus("Contact form isn't configured yet — please email me directly.", false);
+        return;
+      }
+      // Native validity
+      if (!form.checkValidity()) {
+        setStatus("Please fill in your name, a valid email, and a message.", false);
+        return;
+      }
+      btn.disabled = true;
+      label.textContent = "Sending…";
+      spinner.classList.remove("hidden");
+      status.classList.add("hidden");
+
+      try {
+        var data = Object.fromEntries(new FormData(form));
+        var res = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify(data),
+        });
+        var json = await res.json();
+        if (json.success) {
+          form.reset();
+          setStatus("Thanks — your message is on its way. I'll be in touch shortly.", true);
+          label.textContent = "Sent ✓";
+        } else {
+          setStatus(json.message || "Something went wrong. Please email me directly.", false);
+          label.textContent = "Send message";
+        }
+      } catch (err) {
+        setStatus("Network error — please email me directly at " + "mahmoudsabbagh8@gmail.com", false);
+        label.textContent = "Send message";
+      } finally {
+        spinner.classList.add("hidden");
+        btn.disabled = false;
+      }
+    });
+  })();
+</script>

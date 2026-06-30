@@ -1,0 +1,108 @@
+---
+import { profile } from "../data/resume";
+---
+
+<section class="relative overflow-hidden pt-32 sm:pt-36 lg:pt-44" aria-labelledby="hero-heading">
+  <!-- Restrained atmosphere: one faint crimson glow + hairline grid -->
+  <div class="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
+    <div class="absolute -right-[12%] -top-[8%] h-[42rem] w-[42rem] rounded-full opacity-[0.5] blur-[90px]"
+      style="background: radial-gradient(closest-side, var(--primary-soft), transparent 72%);">
+    </div>
+    <div class="absolute inset-0 opacity-[0.55] [mask-image:radial-gradient(120%_80%_at_60%_0%,black,transparent_70%)]"
+      style="background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px); background-size: 64px 64px;">
+    </div>
+  </div>
+
+  <div class="container-page">
+    <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
+      <!-- Left -->
+      <div class="min-w-0">
+        <div data-reveal class="mb-7 inline-flex max-w-full items-center gap-2.5 rounded-full border border-line bg-surface/60 py-1.5 pl-2.5 pr-4 text-[13px] font-medium text-muted backdrop-blur">
+          <span class="relative grid h-4 w-4 shrink-0 place-items-center">
+            <span class="absolute h-2.5 w-2.5 animate-ping rounded-full bg-primary/60"></span>
+            <span class="h-2 w-2 rounded-full bg-primary"></span>
+          </span>
+          <span class="truncate">Open&nbsp;to PM · Scrum&nbsp;Master · PO&nbsp;roles</span>
+        </div>
+
+        <h1 id="hero-heading" data-reveal style="--reveal-delay:60ms" class="font-display text-[clamp(2.4rem,8vw,5rem)] font-semibold leading-[0.98] tracking-[-0.035em] text-ink">
+          <span class="block">Mahmoud</span><span class="block">Sabbagh</span>
+        </h1>
+
+        <p data-reveal style="--reveal-delay:120ms" class="mt-5 max-w-xl text-lg leading-relaxed text-muted sm:text-xl">
+          <span class="font-medium text-ink">Delivery &amp; operations leader.</span>
+          {" "}I turn messy programs into measurable results — lifting KPIs, leading teams, and shipping product under Scrum.
+        </p>
+
+        <div data-reveal style="--reveal-delay:180ms" class="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+          <a href="#contact" class="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-6 py-3.5 text-[15px] font-semibold text-on-primary shadow-[var(--shadow-md)] transition-transform hover:-translate-y-0.5 sm:w-auto">
+            Get in touch
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+          </a>
+          <a href={profile.resumeFile} download class="inline-flex w-full items-center justify-center gap-2 rounded-full border border-line-strong px-6 py-3.5 text-[15px] font-semibold text-ink transition-colors hover:bg-surface sm:w-auto">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" />
+            </svg>
+            Download résumé
+          </a>
+        </div>
+
+        <dl data-reveal style="--reveal-delay:240ms" class="mt-11 flex flex-wrap gap-x-9 gap-y-4 border-t border-line pt-7">
+          <div>
+            <dt class="text-[13px] font-medium text-muted">Experience</dt>
+            <dd class="font-display text-lg font-semibold text-ink">5+ yrs B2B SaaS</dd>
+          </div>
+          <div>
+            <dt class="text-[13px] font-medium text-muted">Leadership</dt>
+            <dd class="font-display text-lg font-semibold text-ink">Teams of 3–5</dd>
+          </div>
+          <div>
+            <dt class="text-[13px] font-medium text-muted">Certified</dt>
+            <dd class="font-display text-lg font-semibold text-ink">PSM I · PSPO I</dd>
+          </div>
+          <div>
+            <dt class="text-[13px] font-medium text-muted">Based in</dt>
+            <dd class="font-display text-lg font-semibold text-ink">St. Augustine, FL</dd>
+          </div>
+        </dl>
+      </div>
+
+      <!-- Right: "Currently" panel -->
+      <div data-reveal style="--reveal-delay:200ms" class="lg:justify-self-end">
+        <div class="relative w-full max-w-sm rounded-[1.5rem] border border-line bg-surface/70 p-2 shadow-[var(--shadow-lg)] backdrop-blur lg:ml-auto">
+          <div class="rounded-[1.1rem] bg-bg p-6">
+            <div class="flex items-center justify-between">
+              <span class="font-display text-[13px] font-semibold uppercase tracking-[0.14em] text-muted">Currently</span>
+              <span class="flex items-center gap-1.5 text-[12px] font-medium text-primary">
+                <span class="h-1.5 w-1.5 rounded-full bg-primary"></span> Active
+              </span>
+            </div>
+
+            <ul class="mt-5 space-y-4">
+              <li class="flex gap-4">
+                <span class="mt-0.5 grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-primary-soft font-display text-sm font-bold text-primary">M</span>
+                <div>
+                  <p class="font-display text-[15px] font-semibold text-ink">Meta</p>
+                  <p class="text-[13.5px] text-muted">Project Coordinator — driving vendor accuracy to 85%+</p>
+                </div>
+              </li>
+              <li class="flex gap-4 border-t border-line pt-4">
+                <span class="mt-0.5 grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-primary-soft font-display text-sm font-bold text-primary">L</span>
+                <div>
+                  <p class="font-display text-[15px] font-semibold text-ink">Loomlance</p>
+                  <p class="text-[13.5px] text-muted">Founder &amp; Product Owner — live SaaS, shipped under Scrum</p>
+                </div>
+              </li>
+            </ul>
+
+            <a href="#experience" class="link-underline mt-6 inline-flex text-[14px] font-semibold text-ink">
+              See the full track record →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,22 @@
+---
+interface Props {
+  label?: string;
+  title: string;
+  lead?: string;
+  align?: "left" | "center";
+}
+const { label, title, lead, align = "left" } = Astro.props;
+---
+
+<div data-reveal class={`max-w-2xl ${align === "center" ? "mx-auto text-center" : ""}`}>
+  {label && (
+    <p class={`mb-3 flex items-center gap-2.5 text-[13px] font-semibold text-primary ${align === "center" ? "justify-center" : ""}`}>
+      <span class="h-px w-6 bg-primary"></span>
+      {label}
+    </p>
+  )}
+  <h2 class="font-display text-[clamp(1.9rem,4.5vw,3rem)] font-semibold tracking-[-0.03em] text-ink">
+    {title}
+  </h2>
+  {lead && <p class="mt-4 text-lg leading-relaxed text-muted">{lead}</p>}
+</div>

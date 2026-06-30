@@ -1,0 +1,142 @@
+---
+import { profile } from "../data/resume";
+import ThemeToggle from "./ThemeToggle.astro";
+
+const links = [
+  { href: "/#about", label: "About" },
+  { href: "/#impact", label: "Impact" },
+  { href: "/#experience", label: "Experience" },
+  { href: "/#loomlance", label: "Loomlance" },
+  { href: "/#contact", label: "Contact" },
+];
+---
+
+<header id="site-nav" class="fixed inset-x-0 top-0 z-40 transition-all duration-300">
+  <div class="container-page">
+    <nav
+      class="mt-3 flex items-center justify-between rounded-full border border-transparent px-2 py-2 transition-all duration-300 sm:px-3"
+      aria-label="Primary"
+    >
+      <a href="/" class="group flex items-center gap-2.5 rounded-full pl-1 pr-3 py-1" aria-label={`${profile.name} — home`}>
+        <span class="grid h-9 w-9 place-items-center rounded-full bg-primary text-on-primary font-display text-sm font-semibold tracking-tight">
+          {profile.initials}
+        </span>
+        <span class="hidden font-display text-[15px] font-semibold tracking-tight text-ink sm:inline">
+          {profile.name}
+        </span>
+      </a>
+
+      <div class="flex items-center gap-1.5">
+        <ul class="mr-1 hidden items-center gap-1 md:flex">
+          {links.map((l) => (
+            <li>
+              <a
+                href={l.href}
+                class="rounded-full px-3.5 py-2 text-[14px] font-medium text-muted transition-colors hover:bg-surface hover:text-ink"
+              >
+                {l.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        <a
+          href={profile.resumeFile}
+          download
+          class="hidden items-center gap-1.5 rounded-full bg-ink px-4 py-2 text-[14px] font-semibold text-bg transition-transform hover:-translate-y-0.5 sm:inline-flex"
+        >
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" />
+          </svg>
+          Résumé
+        </a>
+
+        <ThemeToggle />
+
+        <button
+          type="button"
+          id="menu-btn"
+          class="grid h-10 w-10 place-items-center rounded-full border border-line text-ink transition-colors hover:bg-surface md:hidden"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Mobile menu (fixed → escapes any stacking context) -->
+  <div
+    id="mobile-menu"
+    class="invisible fixed inset-x-0 top-[4.75rem] z-40 origin-top scale-95 px-4 opacity-0 transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] md:hidden"
+  >
+    <div class="container-page">
+      <div class="overflow-hidden rounded-2xl border border-line bg-surface shadow-[var(--shadow-lg)]">
+        <ul class="flex flex-col p-2">
+          {links.map((l) => (
+            <li>
+              <a href={l.href} class="menu-link block rounded-xl px-4 py-3 text-[15px] font-medium text-ink transition-colors hover:bg-surface-2">
+                {l.label}
+              </a>
+            </li>
+          ))}
+          <li class="p-2 pt-1">
+            <a href={profile.resumeFile} download class="flex items-center justify-center gap-2 rounded-xl bg-primary px-4 py-3 text-[15px] font-semibold text-on-primary">
+              Download Résumé
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script is:inline>
+  (function () {
+    var nav = document.getElementById("site-nav");
+    var navBar = nav ? nav.querySelector("nav") : null;
+    var onScroll = function () {
+      if (!navBar) return;
+      var s = window.scrollY > 12;
+      navBar.classList.toggle("is-scrolled", s);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+
+    var btn = document.getElementById("menu-btn");
+    var menu = document.getElementById("mobile-menu");
+    var open = false;
+    function setOpen(v) {
+      open = v;
+      btn.setAttribute("aria-expanded", String(v));
+      btn.setAttribute("aria-label", v ? "Close menu" : "Open menu");
+      menu.classList.toggle("invisible", !v);
+      menu.classList.toggle("opacity-0", !v);
+      menu.classList.toggle("scale-95", !v);
+      menu.classList.toggle("opacity-100", v);
+      menu.classList.toggle("scale-100", v);
+    }
+    if (btn && menu) {
+      btn.addEventListener("click", function () { setOpen(!open); });
+      menu.querySelectorAll(".menu-link").forEach(function (a) {
+        a.addEventListener("click", function () { setOpen(false); });
+      });
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && open) setOpen(false);
+      });
+    }
+  })();
+</script>
+
+<style>
+  nav.is-scrolled {
+    border-color: var(--line);
+    background-color: color-mix(in oklch, var(--bg) 78%, transparent);
+    backdrop-filter: saturate(1.4) blur(14px);
+    box-shadow: var(--shadow-md);
+  }
+</style>

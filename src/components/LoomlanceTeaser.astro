@@ -1,0 +1,49 @@
+---
+import { loomlance } from "../data/resume";
+---
+
+<section id="loomlance" class="scroll-mt-24">
+  <div class="container-page">
+    <div data-reveal class="relative overflow-hidden rounded-[1.75rem] p-8 sm:p-12 lg:p-16" style="background: var(--ink); color: var(--bg);">
+      <!-- accent glow -->
+      <div class="pointer-events-none absolute -right-20 -top-24 h-80 w-80 rounded-full opacity-40 blur-[80px]" style="background: radial-gradient(closest-side, var(--primary), transparent 70%);" aria-hidden="true"></div>
+
+      <div class="relative grid grid-cols-1 gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:gap-16">
+        <div>
+          <p class="flex items-center gap-2.5 text-[13px] font-semibold" style="color: var(--primary);">
+            <span class="h-px w-6" style="background: var(--primary);"></span>
+            Flagship · Product Ownership
+          </p>
+          <h2 class="mt-4 font-display text-[clamp(2rem,4.5vw,3.1rem)] font-semibold leading-[1.04] tracking-[-0.03em]">
+            Loomlance
+          </h2>
+          <p class="mt-4 max-w-xl text-lg leading-relaxed" style="color: color-mix(in oklch, var(--bg) 78%, var(--ink));">
+            {loomlance.tagline} I owned the vision, roadmap, and backlog — directing an AI development agent as the engineering team, and ran release management to a clean launch.
+          </p>
+
+          <div class="mt-8 flex flex-wrap gap-2">
+            {loomlance.stack.map((s) => (
+              <span class="rounded-full border px-3 py-1 text-[13px] font-medium" style="border-color: color-mix(in oklch, var(--bg) 25%, transparent); color: color-mix(in oklch, var(--bg) 85%, var(--ink));">{s}</span>
+            ))}
+          </div>
+
+          <a href="/loomlance" class="group mt-9 inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-[15px] font-semibold transition-transform hover:-translate-y-0.5" style="background: var(--primary); color: var(--on-primary);">
+            Read the case study
+            <svg class="h-4 w-4 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-2 gap-px self-center overflow-hidden rounded-2xl" style="background: color-mix(in oklch, var(--bg) 16%, transparent);">
+          {loomlance.stats.map((s) => (
+            <div class="p-6" style="background: var(--ink);">
+              <p class="font-display text-[clamp(1.8rem,3.5vw,2.4rem)] font-semibold leading-none tracking-[-0.03em]" style="color: var(--primary);">{s.value}</p>
+              <p class="mt-2 text-[13px]" style="color: color-mix(in oklch, var(--bg) 72%, var(--ink));">{s.label}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

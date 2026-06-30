@@ -1,0 +1,29 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Nav from "../components/Nav.astro";
+import Hero from "../components/Hero.astro";
+import About from "../components/About.astro";
+import Metrics from "../components/Metrics.astro";
+import Experience from "../components/Experience.astro";
+import LoomlanceTeaser from "../components/LoomlanceTeaser.astro";
+import Credentials from "../components/Credentials.astro";
+import Contact from "../components/Contact.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<BaseLayout>
+  <span id="top"></span>
+  <Nav />
+  <main id="main">
+    <Hero />
+    <About />
+    <div class="space-y-24 sm:space-y-28">
+      <Metrics />
+      <Experience />
+      <LoomlanceTeaser />
+    </div>
+    <Credentials />
+    <Contact />
+  </main>
+  <Footer />
+</BaseLayout>
