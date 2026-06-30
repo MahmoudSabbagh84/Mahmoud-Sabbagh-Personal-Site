@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Mahmoud Sabbagh — Resume</title>
+<style>
+  /* System fonts only — static, fast-rendering, no variable-font embedding (smooth scrolling) */
+  :root {
+    --ink: #241310;
+    --muted: #6b5d59;
+    --primary: #cf3a2d;
+    --line: #e6ddda;
+    --bg: #ffffff;
+    --sans: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  @page { size: Letter; margin: 0; }
+  html, body { background: var(--bg); }
+  body {
+    font-family: var(--sans);
+    color: var(--ink);
+    font-size: 10.9px;
+    line-height: 1.5;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .page { width: 8.5in; padding: 0.55in 0.66in; margin: 0 auto; }
+  h1, h2, h3 { font-family: var(--sans); letter-spacing: -0.01em; }
+
+  header { border-bottom: 2px solid var(--ink); padding-bottom: 12px; margin-bottom: 15px; }
+  .name { font-size: 33px; font-weight: 700; letter-spacing: -0.025em; line-height: 1; }
+  .title { font-size: 13px; font-weight: 600; color: var(--primary); margin-top: 6px; letter-spacing: 0.01em; }
+  .contact { margin-top: 11px; font-size: 10.6px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 4px 15px; }
+  .contact a { color: var(--muted); text-decoration: none; }
+  .contact span.sep { color: var(--line); }
+
+  .section { margin-top: 14px; }
+  .section > h2 {
+    font-size: 10.4px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.13em;
+    color: var(--primary); margin-bottom: 9px; padding-bottom: 4px; border-bottom: 1px solid var(--line);
+  }
+  .summary { font-size: 11.4px; color: #3d2c28; }
+  .summary strong { color: var(--ink); font-weight: 600; }
+
+  .job { margin-bottom: 11px; page-break-inside: avoid; }
+  .job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .job-role { font-size: 12.6px; font-weight: 700; }
+  .job-org { color: var(--primary); font-weight: 600; }
+  .job-meta { font-size: 10.2px; color: var(--muted); white-space: nowrap; text-align: right; }
+  .job-sub { font-size: 10.4px; color: var(--muted); font-style: italic; margin: 3px 0 5px; }
+  ul.bullets { list-style: none; margin-top: 4px; }
+  ul.bullets li { position: relative; padding-left: 13px; margin-bottom: 3.5px; }
+  ul.bullets li::before { content: ""; position: absolute; left: 0; top: 7px; width: 4px; height: 4px; border-radius: 50%; background: var(--primary); }
+  ul.bullets strong { font-weight: 600; }
+
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 28px; page-break-inside: avoid; margin-top: 4px; }
+  .chip-row { display: flex; flex-wrap: wrap; gap: 5px; }
+  .chip { border: 1px solid var(--line); border-radius: 20px; padding: 3px 9px; font-size: 10.2px; font-weight: 500; }
+  .cert { display: flex; justify-content: space-between; gap: 8px; padding: 4px 0; border-bottom: 1px solid var(--line); font-size: 10.6px; }
+  .cert:last-child { border-bottom: 0; }
+  .cert b { font-weight: 600; }
+  .cert .meta { color: var(--muted); white-space: nowrap; }
+  .edu b { font-weight: 600; }
+  .langs { display: flex; gap: 18px; flex-wrap: wrap; font-size: 10.8px; }
+  .langs b { font-weight: 600; }
+  .muted { color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <div class="name">Mahmoud Sabbagh</div>
+    <div class="title">Project Manager · Scrum Master · Product Owner</div>
+    <div class="contact">
+      <span>St. Augustine, FL</span><span class="sep">•</span>
+      <a href="tel:9045700102">904-570-0102</a><span class="sep">•</span>
+      <a href="mailto:mahmoudsabbagh8@gmail.com">mahmoudsabbagh8@gmail.com</a><span class="sep">•</span>
+      <a href="https://www.linkedin.com/in/mahmoud-sabbagh-5b819a147">linkedin.com/in/mahmoud-sabbagh</a>
+    </div>
+  </header>
+
+  <div class="section">
+    <h2>Summary</h2>
+    <p class="summary">Project and operations professional with <strong>5+ years in automotive B2B SaaS</strong> and <strong>3+ years of team leadership</strong> (teams of 3–5). Currently coordinating 5 Data Quality Analysts across 5–6 vendor programs at Meta, where I lifted vendor accuracy from <strong>~60% to 85%+ sustained</strong>. At DealerOn, cut new-hire ramp time from 2 months to ~3 weeks while holding a <strong>perfect 5/5 CSAT</strong>. <strong>PSM I &amp; PSPO I</strong> and Google Project Management certified, with SQL and a specialization in de-escalation and stakeholder calibration. Founder &amp; Product Owner of <strong>Loomlance</strong>, a live SaaS taken from concept to launch under Scrum.</p>
+  </div>
+
+  <div class="section">
+    <h2>Experience</h2>
+
+    <div class="job">
+      <div class="job-head"><div><span class="job-role">Founder, Product Owner &amp; Scrum Master</span> — <span class="job-org">Loomlance</span></div><div class="job-meta">Oct 2025 – Present · Remote</div></div>
+      <div class="job-sub">Developer-first business-management SaaS — contracts, invoicing, payments, CRM, kanban, time tracking, reporting.</div>
+      <ul class="bullets">
+        <li>Took the product from concept to <strong>live launch in ~8 months</strong>, owning vision, roadmap, and backlog while directing an AI development agent as the engineering team under Scrum.</li>
+        <li>Ran discovery with freelancers before building, translating findings into prioritized epics and user stories.</li>
+        <li>Adapted cadence from month-long build sprints to <strong>one-week sprints</strong> for deployment, QA, and launch.</li>
+        <li>Owned release management end-to-end (Supabase, Stripe, AWS); shipped <strong>8 modules, 4 payment integrations</strong> behind a clean quality gate.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head"><div><span class="job-role">Project Coordinator (Contract)</span> — <span class="job-org">Meta</span></div><div class="job-meta">Dec 2025 – Present · Remote</div></div>
+      <ul class="bullets">
+        <li><strong>Drove vendor accuracy from ~60–70% to 85%+ and held it week over week</strong> on the IG Child Media Accounts program — the headline KPI for the workstream.</li>
+        <li>Produced the gain through a structured weekly calibration cadence across <strong>5 Data Quality Analysts and 5–6 vendor programs</strong>.</li>
+        <li>Ranked engineering fixes by accuracy impact; reported accuracy, volume, and occupancy to leadership weekly so regressions surfaced within days.</li>
+        <li>Perform audits on LLM training datasets, correcting misclassifications and improving model accuracy.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head"><div><span class="job-role">Senior Data Support Specialist · Team Leadership</span> — <span class="job-org">DealerOn</span></div><div class="job-meta">Oct 2025 – Apr 2026 · Remote</div></div>
+      <ul class="bullets">
+        <li>Built a structured onboarding system that <strong>cut new-hire ramp from 2 months to 2.5–3 weeks (~65%)</strong> while maintaining quality.</li>
+        <li>Maintained a <strong>perfect 5/5 CSAT</strong>; enterprise OEM and dealership clients requested me on retainer.</li>
+        <li>Specialized in <strong>de-escalation</strong> for high-stakes accounts, directly contributing to retention of at-risk enterprise relationships.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head"><div><span class="job-role">Senior Data Support Specialist</span> — <span class="job-org">DealerOn</span></div><div class="job-meta">Sep 2022 – Oct 2025 · Remote</div></div>
+      <div class="job-sub">Automotive B2B SaaS — SEO, digital marketing, and hosting for dealerships and OEMs (Toyota, Ford, GM, Honda, BMW, FCA).</div>
+      <ul class="bullets">
+        <li>Led night-shift operations supervising a <strong>team of 3</strong>; transitioned to day-shift leadership of a <strong>team of 5</strong> on enterprise OEM workflows.</li>
+        <li>Subject-matter expert on internal systems and OEM-mandated digital standards; authored technical documentation and process improvements.</li>
+        <li>Root-caused dealership data-quality issues across inventory, pricing, and content with <strong>SQL</strong> and delivered fixes.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head"><div><span class="job-role">Data Support Associate</span> — <span class="job-org">DealerOn</span></div><div class="job-meta">Jul 2021 – Sep 2022 · Remote</div></div>
+      <ul class="bullets">
+        <li>Resolved real-time data-quality incidents for enterprise automotive customers; trained new team members on tooling and investigation techniques.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head"><div><span class="job-role">Junior IT Support Intern</span> — <span class="job-org">MEDGULF</span></div><div class="job-meta">Jun 2019 – Sep 2019 · Beirut, LB</div></div>
+      <ul class="bullets">
+        <li>Resolved IT support requests, installed infrastructure, and configured Windows Server environments.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="cols">
+    <div class="section">
+      <h2>Certifications</h2>
+      <div class="cert"><b>Professional Scrum Master I (PSM I)</b><span class="meta">Scrum.org · 2026</span></div>
+      <div class="cert"><b>Professional Scrum Product Owner I (PSPO I)</b><span class="meta">Scrum.org · 2026</span></div>
+      <div class="cert"><b>Google Project Management Certificate</b><span class="meta">Google · 2025</span></div>
+      <div class="cert"><b>AWS Certified Cloud Practitioner</b><span class="meta">AWS · 2024–27</span></div>
+      <div class="cert"><b>CompTIA Security+</b><span class="meta">CompTIA · 2022</span></div>
+      <div class="cert"><b>LPIC-1</b><span class="meta">LPI · 2017</span></div>
+      <div class="cert"><b>Google Data Analytics</b><span class="meta">In progress · 2026</span></div>
+    </div>
+
+    <div class="section">
+      <h2>Skills</h2>
+      <div class="chip-row">
+        <span class="chip">Agile &amp; Scrum (PSM I, PSPO I)</span>
+        <span class="chip">Backlog &amp; User Stories</span>
+        <span class="chip">Program Coordination</span>
+        <span class="chip">Stakeholder Management</span>
+        <span class="chip">Team Leadership &amp; Onboarding</span>
+        <span class="chip">KPI Reporting &amp; Analytics</span>
+        <span class="chip">SQL &amp; Data Investigation</span>
+        <span class="chip">Process Improvement</span>
+        <span class="chip">De-escalation &amp; Retention</span>
+        <span class="chip">B2B SaaS Operations</span>
+      </div>
+
+      <div class="section">
+        <h2>Education</h2>
+        <p class="edu"><b>B.S., Information &amp; Communication Technology</b><br><span class="muted">American University of Science and Technology · 2013–2018</span></p>
+      </div>
+
+      <div class="section">
+        <h2>Languages</h2>
+        <div class="langs"><span><b>Arabic</b> <span class="muted">Native</span></span><span><b>English</b> <span class="muted">Fluent</span></span><span><b>German</b> <span class="muted">Elementary</span></span></div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
