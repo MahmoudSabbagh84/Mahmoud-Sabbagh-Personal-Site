@@ -199,13 +199,10 @@ export const skillGroups: SkillGroup[] = [
   },
 ];
 
-export type Language = { name: string; level: string; pct: number };
-
-export const languages: Language[] = [
-  { name: "Arabic", level: "Native", pct: 100 },
-  { name: "English", level: "Fluent", pct: 95 },
-  { name: "German", level: "Elementary · improving", pct: 35 },
-];
+export const languages = {
+  bilingual: ["Arabic", "English"],
+  beginner: ["German"],
+};
 
 export const education = {
   degree: "B.S. in Information & Communication Technology",
