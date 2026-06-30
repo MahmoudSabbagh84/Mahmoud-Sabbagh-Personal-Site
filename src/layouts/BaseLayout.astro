@@ -43,8 +43,7 @@ const jsonLd = {
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="author" content={profile.name} />
-    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#2a1715" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#ffffff" id="theme-color-meta" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
@@ -73,6 +72,8 @@ const jsonLd = {
               ? "dark"
               : "light");
           document.documentElement.setAttribute("data-theme", theme);
+          var m = document.getElementById("theme-color-meta");
+          if (m) m.setAttribute("content", theme === "dark" ? "#1c1310" : "#ffffff");
         } catch (e) {}
         document.documentElement.classList.add("js");
       })();

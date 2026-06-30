@@ -19,9 +19,9 @@ import { experience } from "../data/resume";
       <span class="absolute left-[7px] top-2 bottom-2 w-px bg-line md:left-[calc(11rem+7px)]" aria-hidden="true"></span>
 
       {experience.map((job, i) => (
-        <li data-reveal style={`--reveal-delay:${Math.min(i, 4) * 60}ms`} class="relative grid grid-cols-1 gap-x-8 gap-y-3 pb-12 pl-9 last:pb-0 md:grid-cols-[11rem_1fr] md:pl-0">
+        <li data-reveal style={`--reveal-delay:${Math.min(i, 4) * 60}ms`} class="group relative grid grid-cols-1 gap-x-8 gap-y-3 pb-12 pl-9 last:pb-0 md:grid-cols-[11rem_1fr] md:pl-0">
           <!-- Node -->
-          <span class={`absolute left-0 top-1.5 grid h-[15px] w-[15px] place-items-center rounded-full border-2 ${job.current ? "border-primary bg-primary" : "border-line-strong bg-bg"} md:left-44`} aria-hidden="true">
+          <span class={`absolute left-0 top-1.5 grid h-[15px] w-[15px] place-items-center rounded-full border-2 transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${job.current ? "border-primary bg-primary" : "border-line-strong bg-bg group-hover:scale-110 group-hover:border-primary"} md:left-44`} aria-hidden="true">
             {job.current && <span class="h-[5px] w-[5px] rounded-full bg-on-primary"></span>}
           </span>
 

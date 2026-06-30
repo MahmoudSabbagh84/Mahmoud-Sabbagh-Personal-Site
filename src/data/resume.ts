@@ -23,7 +23,7 @@ export const profile = {
 };
 
 export const about = [
-  "I'm a project and operations professional with 5+ years in automotive B2B SaaS and 3+ years leading teams — currently on contract at Meta, and founder and Product Owner of Loomlance, a live SaaS I took from concept to launch.",
+  "I'm a project and operations professional with 5+ years in automotive B2B SaaS and 3+ years leading teams. Currently on contract at Meta, and founder and Product Owner of Loomlance, a live SaaS I took from concept to launch.",
   "My work sits where people, process, and numbers meet: lifting a vendor program's accuracy from ~60% to 85%+ and holding it there, cutting new-hire ramp time by ~65% while keeping a perfect CSAT, and de-escalating high-stakes enterprise accounts until they renew. I'm a certified Scrum Master and Product Owner (PSM I, PSPO I) who runs delivery by inspect-and-adapt, not by ceremony.",
 ];
 
@@ -40,7 +40,7 @@ export const metrics: Metric[] = [
     unit: "%+",
     label: "Vendor accuracy lift",
     context:
-      "Drove the IG Child Media Accounts program from ~60% to 85%+ accuracy at Meta — and held it week over week.",
+      "Drove the IG Child Media Accounts program from ~60% to 85%+ accuracy at Meta, and held it there week over week.",
   },
   {
     value: "65",
@@ -61,7 +61,7 @@ export const metrics: Metric[] = [
     unit: " mo",
     label: "Concept to launch",
     context:
-      "Took Loomlance from idea to live product in ~8 months — 8 modules, 4 payment integrations — under Scrum.",
+      "Took Loomlance from idea to live product in ~8 months: 8 modules and 4 payment integrations, all under Scrum.",
   },
 ];
 
@@ -83,11 +83,11 @@ export const experience: Job[] = [
     location: "Remote · loomlance.com",
     current: true,
     summary:
-      "A developer-first business-management SaaS — contracts, invoicing, payments, CRM, kanban boards, time tracking, expenses, and reporting in one platform.",
+      "A developer-first business-management SaaS: contracts, invoicing, payments, CRM, kanban boards, time tracking, expenses, and reporting in one platform.",
     highlights: [
       "Took the product from concept to live launch in about eight months, owning the vision, roadmap, and full product backlog while directing an AI development agent as the engineering team under Scrum.",
       "Ran discovery before building: conducted market studies with freelancers to learn what they would actually pay for, then translated findings into prioritized epics and user stories.",
-      "Adapted the cadence as the work demanded — month-long sprints through the build, tightened to one-week sprints for deployment, QA, and launch.",
+      "Adapted the cadence as the work demanded: month-long sprints through the build, tightened to one-week sprints for deployment, QA, and launch.",
       "Owned release management end-to-end: stood up the production stack (Supabase, Stripe, AWS), ran a dedicated QA sprint with usability testing, and held a quality gate before going live.",
       "Shipped 8 modules with 4 payment integrations (Stripe, PayPal, bank transfer, cash); now prioritizing the post-launch backlog by user value.",
     ],
@@ -99,10 +99,10 @@ export const experience: Job[] = [
     location: "Remote · New York, USA",
     current: true,
     highlights: [
-      "Drove vendor accuracy from ~60–70% to 85%+ and held it there week over week on the IG Child Media Accounts program — the headline KPI for the entire workstream.",
+      "Drove vendor accuracy from ~60–70% to 85%+ and held it there week over week on the IG Child Media Accounts program, the headline KPI for the entire workstream.",
       "Produced the gain through a structured weekly calibration cadence across 5 Data Quality Analysts and 5–6 vendor programs, standardizing how policy gets interpreted until the numbers held.",
       "Made 85%+ durable: ranked engineering fixes by accuracy impact and vendors affected, then reported accuracy, volume, and occupancy to leadership weekly so any regression surfaced within days.",
-      "Own the program end-to-end — assigning tasks, auditing outputs, and holding policy alignment across every workstream.",
+      "Own the program end-to-end, assigning tasks, auditing outputs, and holding policy alignment across every workstream.",
       "Perform audits on LLM training datasets, correcting misclassifications and driving measurable model-accuracy improvements.",
     ],
   },
@@ -124,12 +124,12 @@ export const experience: Job[] = [
     period: "Sep 2022 – Oct 2025",
     location: "Remote · Maryland, USA",
     summary:
-      "Automotive B2B SaaS — SEO, digital marketing, and web hosting for car dealerships and OEMs (Toyota, Ford, GM, Honda, BMW, FCA).",
+      "Automotive B2B SaaS: SEO, digital marketing, and web hosting for car dealerships and OEMs (Toyota, Ford, GM, Honda, BMW, FCA).",
     highlights: [
-      "Led night-shift operations — supervised a team of 3 managing dealer workflows for enterprise OEM clients and coordinating handoffs with daytime teams.",
-      "Transitioned to day-shift leadership — led a team of 5 on enterprise OEM account workflows and retail data-quality operations.",
+      "Led night-shift operations, supervising a team of 3 managing dealer workflows for enterprise OEM clients and coordinating handoffs with daytime teams.",
+      "Transitioned to day-shift leadership, leading a team of 5 on enterprise OEM account workflows and retail data-quality operations.",
       "Served as subject-matter expert on internal systems and OEM-mandated digital standards; authored technical documentation and process improvements.",
-      "Investigated dealership data-quality issues across inventory, pricing, and content — root-caused with SQL and delivered fixes.",
+      "Investigated dealership data-quality issues across inventory, pricing, and content, root-causing with SQL and delivering fixes.",
     ],
   },
   {
@@ -217,9 +217,9 @@ export const education = {
 export const loomlance = {
   name: "Loomlance",
   url: "https://loomlance.com",
-  tagline: "Concept to live SaaS in eight months — as the Product Owner.",
+  tagline: "Concept to live SaaS in eight months, as the Product Owner.",
   intro:
-    "Loomlance is a developer-first business-management platform: contracts, invoicing, payments, CRM, kanban project boards, time tracking, expenses, and reporting in one place. I founded it and own it as Product Owner and Scrum Master — directing an AI development agent as the engineering team.",
+    "Loomlance is a developer-first business-management platform: contracts, invoicing, payments, CRM, kanban project boards, time tracking, expenses, and reporting in one place. I founded it and own it as Product Owner and Scrum Master, directing an AI development agent as the engineering team.",
   stats: [
     { value: "8", label: "Modules shipped" },
     { value: "4", label: "Payment integrations" },
@@ -229,19 +229,19 @@ export const loomlance = {
   chapters: [
     {
       title: "Discovery before code",
-      body: "Before building anything, I ran market studies with freelancers to learn what they'd actually pay for. Those findings became prioritized epics and user stories — the backlog was grounded in real demand, not assumptions.",
+      body: "Before building anything, I ran market studies with freelancers to learn what they'd actually pay for. Those findings became prioritized epics and user stories, so the backlog was grounded in real demand, not assumptions.",
     },
     {
       title: "An adaptive Scrum cadence",
-      body: "I ran month-long sprints through the build phase, then tightened to one-week sprints for deployment, QA, and launch. Inspect-and-adapt over a fixed process — the cadence served the work, not the other way around.",
+      body: "I ran month-long sprints through the build phase, then tightened to one-week sprints for deployment, QA, and launch. Inspect-and-adapt over a fixed process: the cadence served the work, not the other way around.",
     },
     {
       title: "Release management & a real quality gate",
-      body: "I stood up the production stack (Supabase, Stripe, AWS) and ran a dedicated QA sprint with usability testing from unaffiliated users. We went live only once the free tier ran clean — a deliberate quality gate, not a date-driven launch.",
+      body: "I stood up the production stack (Supabase, Stripe, AWS) and ran a dedicated QA sprint with usability testing from unaffiliated users. We went live only once the free tier ran clean: a deliberate quality gate, not a date-driven launch.",
     },
     {
       title: "Shipped, then prioritized for value",
-      body: "Launch delivered 8 modules with 4 payment integrations (Stripe, PayPal, bank transfer, cash). Post-launch, I'm sequencing the paid-tier backlog by user value — the founder discipline of saying not-yet to good ideas.",
+      body: "Launch delivered 8 modules with 4 payment integrations (Stripe, PayPal, bank transfer, cash). Post-launch, I'm sequencing the paid-tier backlog by user value: the founder discipline of saying not-yet to good ideas.",
     },
   ],
   stack: ["Supabase", "Stripe", "AWS", "PayPal", "Scrum"],

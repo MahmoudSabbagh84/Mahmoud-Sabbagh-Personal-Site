@@ -18,7 +18,7 @@ import { about, profile, education } from "../data/resume";
       </div>
 
       <div>
-        <div class="space-y-5 text-lg leading-relaxed text-muted">
+        <div class="max-w-[60ch] space-y-5 text-lg leading-relaxed text-muted">
           {about.map((para, i) => (
             <p data-reveal style={`--reveal-delay:${i * 80}ms`} class="[&_strong]:font-semibold [&_strong]:text-ink">
               <Fragment set:html={para.replace(/(85%\+|~65%|perfect CSAT|PSM I, PSPO I|Loomlance)/g, "<strong>$1</strong>")} />
@@ -28,8 +28,8 @@ import { about, profile, education } from "../data/resume";
 
         <div data-reveal class="mt-8 flex flex-wrap items-center gap-x-8 gap-y-3 border-t border-line pt-6 text-[14.5px]">
           <div>
-            <span class="text-muted">Education — </span>
-            <span class="font-medium text-ink">{education.degree}</span>
+            <span class="font-semibold uppercase tracking-[0.12em] text-[11px] text-primary">Education</span>
+            <span class="ml-2 font-medium text-ink">{education.degree}</span>
           </div>
           <div class="text-muted">{education.school} · {education.period}</div>
         </div>

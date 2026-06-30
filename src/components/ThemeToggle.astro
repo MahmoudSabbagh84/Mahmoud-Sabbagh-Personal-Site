@@ -5,7 +5,7 @@
 <button
   type="button"
   id="theme-toggle"
-  class="group relative grid h-10 w-10 place-items-center rounded-full border border-line text-ink transition-colors hover:border-line-strong hover:bg-surface"
+  class="group relative grid h-11 w-11 place-items-center rounded-full border border-line text-ink transition-colors hover:border-line-strong hover:bg-surface"
   aria-label="Toggle color theme"
   title="Toggle theme"
 >
@@ -38,7 +38,8 @@
       root.classList.add("theme-transition");
       root.setAttribute("data-theme", next);
       try { localStorage.setItem("theme", next); } catch (e) {}
-      var meta = document.querySelector('meta[name="theme-color"]');
+      var meta = document.getElementById("theme-color-meta");
+      if (meta) meta.setAttribute("content", next === "dark" ? "#1c1310" : "#ffffff");
       window.setTimeout(function () {
         root.classList.remove("theme-transition");
       }, 450);
