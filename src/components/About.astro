@@ -6,11 +6,11 @@ import { about, profile, education } from "../data/resume";
   <div class="container-page">
     <div class="grid grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
       <div data-reveal>
-        <p class="mb-3 flex items-center gap-2.5 text-[14.5px] font-semibold text-primary-ink">
+        <p class="mb-3 flex items-center gap-2.5 text-[19px] font-semibold text-primary-ink">
           <span class="h-px w-6 bg-primary"></span>
           About
         </p>
-        <h2 class="font-display text-[clamp(1.9rem,4.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.03em] text-ink">
+        <h2 class="font-display text-[clamp(2.47rem,5.85vw,3.9rem)] font-semibold leading-[1.05] tracking-[-0.03em] text-ink">
           People, process,
           <span class="text-primary-ink">and the numbers</span>
           that prove it.
@@ -18,7 +18,7 @@ import { about, profile, education } from "../data/resume";
       </div>
 
       <div>
-        <div class="max-w-[60ch] space-y-5 text-lg leading-relaxed text-muted">
+        <div class="max-w-[60ch] space-y-5 text-[1.46rem] leading-relaxed text-muted">
           {about.map((para, i) => (
             <p data-reveal style={`--reveal-delay:${i * 80}ms`} class="[&_strong]:font-semibold [&_strong]:text-ink">
               <Fragment set:html={para.replace(/(85%\+|~65%|perfect CSAT|PSM I, PSPO I|Loomlance)/g, "<strong>$1</strong>")} />
@@ -26,9 +26,9 @@ import { about, profile, education } from "../data/resume";
           ))}
         </div>
 
-        <div data-reveal class="mt-8 flex flex-wrap items-center gap-x-8 gap-y-3 border-t border-line pt-6 text-[15.5px]">
+        <div data-reveal class="mt-8 flex flex-wrap items-center gap-x-8 gap-y-3 border-t border-line pt-6 text-[20px]">
           <div>
-            <span class="font-semibold uppercase tracking-[0.12em] text-[13px] text-primary-ink">Education</span>
+            <span class="font-semibold uppercase tracking-[0.12em] text-[17px] text-primary-ink">Education</span>
             <span class="ml-2 font-medium text-ink">{education.degree}</span>
           </div>
           <div class="text-muted">{education.school} · {education.period}</div>

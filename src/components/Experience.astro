@@ -5,11 +5,11 @@ import { experience } from "../data/resume";
 <section id="experience" class="section-pad scroll-mt-24">
   <div class="container-page">
     <div class="mb-14">
-      <p data-reveal class="mb-3 flex items-center gap-2.5 text-[14.5px] font-semibold text-primary-ink">
+      <p data-reveal class="mb-3 flex items-center gap-2.5 text-[19px] font-semibold text-primary-ink">
         <span class="h-px w-6 bg-primary"></span>
         Experience
       </p>
-      <h2 data-reveal class="font-display text-[clamp(1.9rem,4.5vw,3rem)] font-semibold tracking-[-0.03em] text-ink">
+      <h2 data-reveal class="font-display text-[clamp(2.47rem,5.85vw,3.9rem)] font-semibold tracking-[-0.03em] text-ink">
         A track record of measurable delivery
       </h2>
     </div>
@@ -27,10 +27,10 @@ import { experience } from "../data/resume";
 
           <!-- Period column -->
           <div class="md:pr-10 md:text-right">
-            <p class="font-display text-[16px] font-semibold text-ink tabular">{job.period}</p>
-            <p class="mt-0.5 text-[14.5px] text-muted">{job.location}</p>
+            <p class="font-display text-[21px] font-semibold text-ink tabular">{job.period}</p>
+            <p class="mt-0.5 text-[19px] text-muted">{job.location}</p>
             {job.current && (
-              <span class="mt-2 inline-flex items-center gap-1.5 rounded-full bg-primary-soft px-2.5 py-0.5 text-[13.5px] font-semibold text-primary-ink">
+              <span class="mt-2 inline-flex items-center gap-1.5 rounded-full bg-primary-soft px-2.5 py-0.5 text-[17.5px] font-semibold text-primary-ink">
                 <span class="h-1.5 w-1.5 rounded-full bg-primary"></span> Now
               </span>
             )}
@@ -38,12 +38,12 @@ import { experience } from "../data/resume";
 
           <!-- Detail column -->
           <div class="md:pl-10">
-            <h3 class="font-display text-xl font-semibold tracking-[-0.02em] text-ink">{job.role}</h3>
-            <p class="mt-0.5 text-[17px] font-medium text-primary-ink">{job.org}</p>
-            {job.summary && <p class="mt-3 max-w-2xl text-[17px] italic leading-relaxed text-muted">{job.summary}</p>}
+            <h3 class="font-display text-[1.63rem] font-semibold tracking-[-0.02em] text-ink">{job.role}</h3>
+            <p class="mt-0.5 text-[22px] font-medium text-primary-ink">{job.org}</p>
+            {job.summary && <p class="mt-3 max-w-2xl text-[22px] italic leading-relaxed text-muted">{job.summary}</p>}
             <ul class="mt-4 space-y-2.5">
               {job.highlights.map((h) => (
-                <li class="flex gap-3 text-[17px] leading-relaxed text-muted">
+                <li class="flex gap-3 text-[22px] leading-relaxed text-muted">
                   <svg class="mt-[7px] h-2.5 w-2.5 shrink-0 text-primary-ink" viewBox="0 0 8 8" aria-hidden="true"><circle cx="4" cy="4" r="2.2" fill="currentColor" /></svg>
                   <span>{h}</span>
                 </li>

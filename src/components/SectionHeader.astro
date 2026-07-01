@@ -10,13 +10,13 @@ const { label, title, lead, align = "left" } = Astro.props;
 
 <div data-reveal class={`max-w-2xl ${align === "center" ? "mx-auto text-center" : ""}`}>
   {label && (
-    <p class={`mb-3 flex items-center gap-2.5 text-[14.5px] font-semibold text-primary-ink ${align === "center" ? "justify-center" : ""}`}>
+    <p class={`mb-3 flex items-center gap-2.5 text-[19px] font-semibold text-primary-ink ${align === "center" ? "justify-center" : ""}`}>
       <span class="h-px w-6 bg-primary"></span>
       {label}
     </p>
   )}
-  <h2 class="font-display text-[clamp(1.9rem,4.5vw,3rem)] font-semibold tracking-[-0.03em] text-ink">
+  <h2 class="font-display text-[clamp(2.47rem,5.85vw,3.9rem)] font-semibold tracking-[-0.03em] text-ink">
     {title}
   </h2>
-  {lead && <p class="mt-4 text-lg leading-relaxed text-muted">{lead}</p>}
+  {lead && <p class="mt-4 text-[1.46rem] leading-relaxed text-muted">{lead}</p>}
 </div>

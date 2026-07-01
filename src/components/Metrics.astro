@@ -6,11 +6,11 @@ import { metrics } from "../data/resume";
   <div class="container-page">
     <div class="overflow-hidden rounded-[1.75rem] border border-line bg-surface">
       <div class="border-b border-line px-7 py-6 sm:px-10">
-        <p data-reveal class="flex items-center gap-2.5 text-[14.5px] font-semibold text-primary-ink">
+        <p data-reveal class="flex items-center gap-2.5 text-[19px] font-semibold text-primary-ink">
           <span class="h-px w-6 bg-primary"></span>
           Impact at a glance
         </p>
-        <p data-reveal class="mt-2 max-w-2xl text-lg text-ink">
+        <p data-reveal class="mt-2 max-w-2xl text-[1.46rem] text-ink">
           Four numbers that summarize the work. Each one earned and held, not a one-off spike.
         </p>
       </div>
@@ -28,8 +28,8 @@ import { metrics } from "../data/resume";
             <p class="flex items-baseline font-display text-[clamp(2.1rem,3.7vw,2.9rem)] font-semibold leading-none tracking-[-0.035em] text-ink tabular">
               <span class="metric-num" data-count={countTo}>{m.value}</span><span class="ml-0.5 text-[0.58em] font-semibold tracking-normal text-primary-ink">{m.unit}</span>
             </p>
-            <p class="mt-3 font-display text-[17px] font-semibold text-ink">{m.label}</p>
-            <p class="mt-2 text-[16px] leading-relaxed text-muted">{m.context}</p>
+            <p class="mt-3 font-display text-[22px] font-semibold text-ink">{m.label}</p>
+            <p class="mt-2 text-[21px] leading-relaxed text-muted">{m.context}</p>
             <span class="absolute bottom-0 left-0 h-[2px] w-0 bg-primary transition-[width] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:w-full"></span>
           </div>
           );
